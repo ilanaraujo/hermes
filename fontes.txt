@@ -1,0 +1,9 @@
+api:
+https://www.okanebox.com.br/como-usar/api-de-acoes-empresas-bovespa/
+
+lista de empresas na bolsa:
+https://www.infomoney.com.br/cotacoes/empresas-b3/
+
+explicação sobre códigos:
+https://www.cnnbrasil.com.br/business/letras-e-numeros-ajudam-a-identificar-acao-na-bolsa-saiba-o-que-significam/
+
