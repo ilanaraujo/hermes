@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
-from .models import Ativo, Empresa
+from .models import Ativo, AtivoMonitorado, Consulta, Empresa
+from datetime import date
 
 import urllib, json
 
@@ -13,11 +14,15 @@ def testejson(request):
     url = 'https://www.okanebox.com.br/api/acoes/hist/PETR4/20220803/20220804/'
     r = urllib.request.urlopen(url)
     data = json.loads(r.read())
-    aurelio = dict(data)
+    aurelio = dict(data) # Usando dicionnário para melhor extração dos dados
     return HttpResponse(aurelio)
 
+def connfiguracao(request):
+    # ativos = Ativo.objects.all()    
+    return HttpResponse("Página de connfigurações")
+
 def armazena_dados_csv(request):
-    #return redirect('index')
+    return redirect('index')
 
     # Código utilizado para inserir as empresas e ativos no banco de dados
     from .lista_empresas_ativos import lista_ativos, lista_empresas
@@ -39,4 +44,26 @@ def armazena_dados_csv(request):
     return redirect('index')
 
 def lista(request):
-    return 0
+    ativos = Ativo.objects.all()
+    lista_ativos_empresas = list()
+    for ativo in ativos:
+        empresa_correspondente = ativo.empresa
+        lista_ativos_empresas.append([ativo, empresa_correspondente])
+
+    informacoes = {
+        'ativos' : ativos
+    }
+    return render(request, 'cotacao/lista.html', informacoes)
+
+def obter_cotacao(request, id_ativo):
+    ativo = Ativo.objects.get(id=id_ativo)
+    url = f'https://www.okanebox.com.br/api/acoes/ultima/{ativo}/'
+    r = urllib.request.urlopen(url)
+    dados = json.loads(r.read())
+    informacoes = dict(dados)
+    informacoes['ativo'] = ativo
+    data = date.today()
+    preco = float(informacoes['PREULT'])
+    nova_consulta = Consulta(ativo=ativo, preco=preco, data=data)
+    nova_consulta.save()
+    return render(request, 'cotacao/obter_cotacao.html', informacoes)

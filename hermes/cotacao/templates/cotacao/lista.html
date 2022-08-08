@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lista de Ativos</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Código do ativo</th>
+                <th>Empresa</th>
+                <th>Status</th>
+                <th>Opções</th>
+            </tr>
+            {% for ativo in ativos %}
+            <tr>
+                <td>{{ ativo }}</td>
+                <td>{{ ativo.empresa }}</td>
+                <td>ON ou OFF</td>
+                <td><a href="{% url 'obter_cotacao' ativo.id %}">Configurações</a></td>
+                <td><a href="{% url 'obter_cotacao' ativo.id %}">Cotação Atual</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
