@@ -1,0 +1,400 @@
+,nome,cod_bolsa
+0,Investo ETF Global Agribusiness,FOOD
+1,Aeris,AERI
+2,Intercement,ICBR
+3,Dotz,DOTZ
+4,Gol,GOLL
+5,VIA S.A,VIIA
+6,Armac,ARML
+7,Multilaser,MLAS
+8,CBA,CBAV
+9,3tentos,TTEN
+10,BR Partners,BRBI
+11,GetNinjas,NINJ
+12,Athena Saúde,ATEA
+13,Banco Modal,MODL
+14,Vittia Fertilizantes,VITT
+15,Kora Saúde,KRSA
+16,Caixa Seguridade,CXSE
+17,Rio Alto Energias Renováveis,RIOS
+18,Hospital Care Caledonia,HCAR
+19,Grupos GPS,GGPS
+20,Mater Dei,MATD
+21,Allied Tecnologia,ALLD
+22,Blau Farmacêutica,BLAU
+23,Atma Participações,ATMP
+24,Assaí,ASAI
+25,Grupo JSL,JSLG
+26,CSN Mineração,CMIN
+27,Eletromídia,ELMD
+28,Orizon,ORVR
+29,OceanPact,OPCT
+30,Westwing,WEST
+31,Cruzeiro Do Sul Educacional,CSED
+32,Bemobi,BMOB
+33,Jalles Machado,JALL
+34,Mobly,MBLY
+35,Espaçolaser,ESPA
+36,Vamos,VAMO
+37,Intelbras SA,INTB
+38,Hedge Investiments,CJCT
+39,BM Brascam Lajes Corporativas,BMLC
+40,Real Estate Capital,RECR
+41,FII URCA RENCI,URPR
+42,Devant Recebíveis Imobiliários,DEVA
+43,Mérito Investimentos,MFAI
+44,Neogrid,NGRD
+45,Alphaville S.A.,AVLL
+46,3R Petroleum,RRRP
+47,Enjoei,ENJU
+48,Méliuz,CASH
+49,Track & Field,TFCO
+50,Triple Play,CONX
+51,Grupo Mateus,GMAT
+52,Sequoia,SEQL
+53,Compass,PASS
+54,Boa Vista SCPC,BOAS
+55,Melnick,MELK
+56,Hidrovias do Brasil,HBSA
+57,Simpar,SIMH
+58,Cury,CURY
+59,Plano & Plano,PLPL
+60,Petz,PETZ
+61,Pague Menos,PGMN
+62,Lavvi Incorporadora,LAVV
+63,Quero-Quero,LJQQ
+64,d1000,DMVF
+65,Grupo Soma,SOMA
+66,Riva 9,RIVA
+67,Ambipar,AMBP
+68,Allpark,ALPK
+69,Mitre Realty,MTRE
+70,Moura Dubeux,MDNE
+71,Bardella,BDLL
+72,UPS,UPSS
+73,Lockheed,LMTB
+74,Johnson,JNJB
+75,Fedex Corp,FDXB
+76,Exxon Mobile,EXXO
+77,Caterpillar,CATP
+78,Bristolmyers,BMYB
+79,Arcelor,ARMT
+80,American Express,AXPB
+81,Abbott Laboratories,ABTT
+82,Santos - Brasil,STBP
+83,Randon Part,RAPT
+84,Engie,EGIE
+85,MMX Mineração,MMXM
+86,Lupatech,LUPA
+87,Inepar,INEP
+88,Ger Paranapanema,GEPA
+89,Fras-Le,FRAS
+90,Afluente T,AFLT
+91,Cedro,CEDO
+92,Netflix,NFLX
+93,Nike,NIKE
+94,McDonald's,MCDC
+95,Home Depot,HOME
+96,Ford Motors,FDMO
+97,Comcast,CMCS
+98,Amazon,AMZO
+99,Rodobens,RDNI
+100,Saraiva Livr,SLED
+101,Rossi Resid,RSID
+102,Mundial,MNDL
+103,Metal Leve,LEVE
+104,Karsten,CTKA
+105,Iochpe-Maxion,MYPK
+106,Grendene,GRND
+107,Locamerica,LCAM
+108,C&A,CEAB
+109,Le Lis Blanc,LLIS
+110,Grazziotin,CGRA
+111,Estrela,ESTR
+112,Direcional,DIRR
+113,Coteminas,CTNM
+114,Anima,ANIM
+115,Even,EVEN
+116,Marisa,AMAR
+117,Movida,MOVI
+118,JHSF,JHSF
+119,Helbor,HBOR
+120,PDG Realty,PDGR
+121,Arezzo,ARZZ
+122,Ez Tec,EZTC
+123,Alpargatas,ALPA
+124,Localiza,RENT
+125,MRV Engenharia,MRVE
+126,Magazine Luiza,MGLU
+127,Lojas Renner,LREN
+128,Cogna,COGN
+129,Whirlpool,WHRL
+130,Tecnisa,TCSA
+131,Starbucks,SBUB
+132,Smiles,SMLS
+133,Ser Educacional,SEER
+134,Hoteis Othon,HOOT
+135,Gafisa,GFSA
+136,YDUQS,YDUQ
+137,Cyrela Realty,CYRE
+138,CVC,CVCB
+139,Grupo SBF,SBFG
+140,Cambuci,CAMB
+141,Privalia,PRVA
+142,Walmart,WALM
+143,Procter Gamble,PGCO
+144,Pepsico Inc,PEPB
+145,Colgate,COLG
+146,Coca-Cola,COCA
+147,Avon,AVON
+148,São Martinho,SMTO
+149,MDiasBranco,MDIA
+150,CAMIL,CAML
+151,Brasilagro,AGRO
+152,Minerva,BEEF
+153,Vivara,VIVA
+154,Carrefour,CRFB
+155,Pão de Açúcar,PCAR
+156,Natura,NTCO
+157,Marfrig,MRFG
+158,JBS,JBSS
+159,BRF,BRFS
+160,Banco Inter,INBR
+161,STONE CO,STOC
+162,Nu Holdings,NUBR
+163,Iguatemi S.A.,IGTI
+164,XP Inc,XPBR
+165,TradersClub,TRAD
+166,BRB Banco,BSLI
+167,Battistella,BTTL
+168,Banpara,BPAR
+169,Wells Fargo,WFCO
+170,Visa,VISA
+171,Morgan Stanley,MSBR
+172,Mastercard,MSCD
+173,JPMorgan,JPMC
+174,Honeywell,HONB
+175,GE,GEOO
+176,Goldman Sachs,GSGI
+177,Citigroup,CTGP
+178,Bank America,BOAC
+179,3M,MMMC
+180,Sao Carlos,SCAR
+181,LPS Brasil,LPSB
+182,BMG,BMGB
+183,Gradiente,IGBR
+184,General Shopping,GSHP
+185,Porto Seguro,PSSA
+186,CSU CardSyst,CARD
+187,Brasil Brokers,BBRK
+188,BR Properties,BRPR
+189,Banrisul,BRSR
+190,Santander BR,SANB
+191,Multiplan,MULT
+192,Itaú Unibanco,ITUB
+193,Aliansce Sonae,ALSO
+194,Banco Mercantil de Investimentos,BMIN
+195,Mercantil do Brasil Financeira,MERC
+196,Log,LOGG
+197,Itaúsa,ITSA
+198,IRB Brasil RE,IRBR
+199,Padtec,PDTC
+200,SYN Prop Tech,SYNE
+201,Bradesco,BBDC
+202,brMalls,BRML
+203,Alper,APER
+204,BB Seguridade,BBSE
+205,Banco Pan,BPAN
+206,Banco do Brasil,BBAS
+207,Terra Santa Agro SA,LAND
+208,Dexxos Part,DEXP
+209,Celulose Irani,RANI
+210,Freeport,FCXO
+211,Paranapanema,PMAM
+212,Ferbasa,FESA
+213,Eucatex,EUCA
+214,Suzano Papel,SUZB
+215,Klabin S/A,KLBN
+216,Vale,VALE
+217,Unipar,UNIP
+218,Suzano Holding,NEMO
+219,Gerdau,GOAU
+220,Dexco,DXCO
+221,CSN,CSNA
+222,Braskem,BRKM
+223,Bradespar,BRAP
+224,COPEL UNT N2,CPLE
+225,FII GTIS LG,GTLG
+226,PPLA,PPLA
+227,BKR 20YR TRS,BTLT
+228,BKR 1 3 YRTR,BSHY
+229,BKR SHORT TR,BSHV
+230,BKR 3 7 YRTR,BIEI
+231,BKR 7 10 YRT,BIYT
+232,BKR US TREAS,BGOV
+233,INVESTO ALUG,ALUG
+234,INVESTO WRLD,WRLD
+235,Caixa Agências,CXAG
+236,FII ROOFTOPICI,ROOF
+237,FIAGRO JGP CI,JGPX
+238,FII PLUR URBCI,PURB
+239,FII BRIO ME CI,BIME
+240,FII JS A FINCI,JSAF
+241,Tellus Desenvolvimento Logístico,TELD
+242,FII MORE CRICI ER,MORC
+243,FII HUSI CI ES,HUSI
+244,FII CYRELA CI ES,CYCR
+245,EQI RECECI,EQIR
+246,CARTESIA FIICI,CACR
+247,FIAGRO RIZA CI,RZAG
+248,Wilson Sons,PORT
+249,Getnet,GETT
+250,BKR US ENER,BIYE
+251,BKR MS EAFE,BSCZ
+252,BKR MS USA S,BUSA
+253,BKR MS RUSS,BERU
+254,BKR SEMICOND,BSOX
+255,FT NAT GAS,BFCG
+256,FT HCARE ALPH DRN,BFXH
+257,FT TECH ALPH,BFTA
+258,FT CLOUD CPT,BKYY
+259,FT NASD100 TC,BQTC
+260,FT DJ INTERN,BFDN
+261,FT RISI DIVID,BFDA
+262,FT INTL EQ OP,BFPI
+263,FT NASD100 EQ,BQQW
+264,FT EQ OPPORT,BFPX
+265,FT NASD CYBER,BCIR
+266,FT MOR DV LEA,BFDL
+267,FT NYSE BIOT DRN,BFBI
+268,BKR SP100 DRN ED,BOEF
+269,BKR MS WLD,BURT
+270,BKR GL Clean,BICL
+271,BKR GL Fin,BIXG
+272,Coinbase Glob,C2OI
+273,Store Capital,S2TO
+274,ISHARES MILA,MILA
+275,ISHARES CSMO,CSMO
+276,IT NOW HYDROCI,YDRO
+277,BTG S&P 500 CI,SPXB
+278,BTG SMLL CAPCI,SMAB
+279,West Pharma,W2ST
+280,Squarespace,S2QS
+281,Uipath Inc,P2AT
+282,Godaddy Inc,G2DD
+283,Doordash Inc,D2AS
+284,Camden Prop,C2PT
+285,Sp500growth,BIVW
+286,Sp500 Value,BIVE
+287,Msciglmivolf,BCWV
+288,Avalara Inc,A2VL
+289,Amc Entert H,A2MC
+290,AF Invest,AFHI
+291,BRL Trust DTVM,HSRE
+292,Votorantim Asset Management,VSEC
+293,Agribrasil,GRAO
+294,INVESTO USTK,USTK
+295,AgroGalaxy,AGXY
+296,Tronox,CRPG
+297,Smart Fit,SMFT
+298,Boa Safra,SOJA
+299,Zynga Inc,Z2NG
+300,Trade Desk,T2TD
+301,Teladochealt,T2DH
+302,Sun Commun,S2UI
+303,Square Inc,S2QU
+304,Snowflake,S2NW
+305,Shopify Inc,S2HO
+306,Caesars Entt,C2ZR
+307,Unity Softwr,U2ST
+308,Sea Ltd,S2EA
+309,Penn Nationl,P2EN
+310,Medical P Tr,M2PW
+311,Kingsoft Chl,K2CG
+312,Draftkings,D2KN
+313,Cyrusone Inc,C2ON
+314,Churchill Dw,C2HD
+315,Beyond Meat,B2YN
+316,Energisa MT,ENMT
+317,FII AUTONOMYCI,AIEC
+318,Vibra Energia S.A,VBBR
+319,Raízen,RAIZ
+320,PetroRecôncavo Geral SA,RECV
+321,Schlumberger,SLBG
+322,Halliburton,HALI
+323,ConocoPhillips,COPH
+324,Chevron,CHVX
+325,PETRORIO,PRIO
+326,OSX Brasil,OSXB
+327,Dommo,DMMO
+328,Pet Manguinhos,RPMG
+329,Ultrapar,UGPA
+330,Petrobras,PETR
+331,Enauta Part,ENAT
+332,Oncoclínicas,ONCO
+333,Viveo,VVEO
+334,Instituto Hermes Pardini SA,PARD
+335,Biomm,BIOM
+336,Baumer,BALM
+337,Pfizer,PFIZ
+338,Merck,MRCK
+339,Biotoscana,GBIO
+340,Dimed,PNVL
+341,Alliar,AALR
+342,OdontoPrev,ODPV
+343,RD,RADL
+344,Qualicorp,QUAL
+345,Ourofino S/A,OFSA
+346,Hypera Pharma,HYPE
+347,Fleury,FLRY
+348,ClearSale,CLSA
+349,Livetech,LVTC
+350,G2D Investments,G2DI
+351,Infracommerce,IFCM
+352,Alphabet,GOGL
+353,Locaweb,LWSA
+354,Totvs,TOTS
+355,Xerox,XRXB
+356,Qualcomm,QCOM
+357,Oracle,ORCL
+358,Microsoft,MSFT
+359,IBM,IBMB
+360,Intel,ITLC
+361,HP Company,HPQB
+362,eBay,EBAY
+363,Cisco,CSCO
+364,Att Inc,ATTB
+365,Apple,AAPL
+366,Linx,LINX
+367,Positivo Inf,POSI
+368,Brisanet,BRIT
+369,Unifique,FIQE
+370,Desktop,DESK
+371,Verizon,VERZ
+372,OI,OIBR
+373,Tim Participações,TIMS
+374,Telefônica Brasil S.A,VIVT
+375,Telebras,TELB
+376,Auren Energia,AURE
+377,Omega Energia,MEGA
+378,Celpe,CEPE
+379,CEEE-D,CEED
+380,Ceee-gt,EEEL
+381,Casan,CASN
+382,CEG,CEGR
+383,CEB,CEBR
+384,Renova,RNEW
+385,Coelce,COCE
+386,Celesc,CLSC
+387,Alupar Investimento,ALUP
+388,Sanepar,SAPR
+389,CPFL Renovav,CPRE
+390,CPFL Energia,CPFE
+391,Comgás,CGAS
+392,AES Brasil,AESB
+393,Neoenergia,NEOE
+394,ISA CTEEP,TRPL
+395,Taesa,TAEE
+396,Sabesp,SBSP
+397,CESP,CESP
+398,Cemig,CMIG

@@ -1,24 +1,16 @@
-import pandas as pd
 from .models import Ativo, Empresa
 
-PATH_ATIVOS = 'ativos.csv'
-PATH_EMPRESAS = 'empresas_codigo.csv'
+def armazena_empresas(lista):
+    for string_completa in lista:
+        string_separada = string_completa.split(',')
+        nome_empresa = string_separada[1]
+        cod_empresa = string_separada[2]
+        nova_empresa = Empresa(nome=nome_empresa, codigo=cod_empresa) 
+        nova_empresa.save()
 
-df_empresas = pd.read_csv(PATH_EMPRESAS)
-df_ativos = pd.read_csv(PATH_ATIVOS)
-
-def armazena_empresas(df_empresas):
-    if not Ativo.objects.get(id=0):
-        for i in df_empresas.index:
-            nome = df_empresas.iloc[i,0]
-            cod_bolsa = df_empresas.iloc[i,1]
-            nova_empresa = Empresa(nome=nome, codigo=cod_bolsa)
-            nova_empresa.save()
-
-def armazena_ativos(df_ativos):
-    if not Ativo.objects.get(id=0):
-        for i in df_ativos.index:
-            codigo = df_ativos.iloc[i,0]
-            empresa = Empresa.objects.get(codigo=codigo[:4])
-            ativo = Ativo(codigo=codigo, empresa=empresa.id)
-            ativo.save()
+def armazena_ativos(lista):
+    for string_completa in lista:
+        string_separada = string_completa.split(',')
+        codigo_ativo = string_separada[1]
+        empresa = Empresa.objects.filter(codigo=codigo_ativo[:4]).first
+        novo_ativo = Ativo(codigo=codigo_ativo, empresa=empresa)

@@ -17,9 +17,25 @@ def testejson(request):
     return HttpResponse(aurelio)
 
 def armazena_dados_csv(request):
-    from .armazena_dados_csv import df_ativos, df_empresas, armazena_ativos, armazena_empresas
-    armazena_ativos(df_ativos)
-    armazena_empresas(df_empresas)
+    #return redirect('index')
+
+    # Código utilizado para inserir as empresas e ativos no banco de dados
+    from .lista_empresas_ativos import lista_ativos, lista_empresas
+
+    for string_completa in lista_empresas:
+        string_separada = string_completa.split(',')
+        nome_empresa = string_separada[1]
+        cod_empresa = string_separada[2]
+        nova_empresa = Empresa(nome=nome_empresa, codigo=cod_empresa) 
+        nova_empresa.save()
+    
+    for string_completa in lista_ativos:
+        string_separada = string_completa.split(',')
+        codigo_ativo = string_separada[1]
+        empresa = Empresa.objects.filter(codigo=codigo_ativo[:4]).first()
+        novo_ativo = Ativo(codigo=codigo_ativo, empresa=empresa)
+        novo_ativo.save()
+
     return redirect('index')
 
 def lista(request):
