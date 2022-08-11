@@ -1,0 +1,22 @@
+{% extends 'cotacao/base.html' %}
+
+{% block body %}
+<div class="alinha-centro">
+    <h2>
+        Monitoramento do <br>
+        Ativo
+    </h2>
+
+    <form action={% url 'configuracao' %} method="post">
+        {%  csrf_token %}
+        {% for field in form %}
+            <div class="fieldWrapper">
+                {{ field.errors }}
+                {{ field.label_tag }} {{ field }}
+            </div>
+        {% endfor %}
+        <input type="submit" value="Concluir">
+    </form>
+</div>
+
+{% endblock %}

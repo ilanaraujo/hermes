@@ -5,7 +5,7 @@ table, th, td {
 }
 
 body {
-    align-items: center;
+    background-color: #eeeeee;
 }
 
 .alinha-centro{
@@ -31,8 +31,4 @@ button.config {
 button.config:hover {
     background-color:black;
     color:aquamarine;
-}
-
-a.botao{
-    padding: 1px;
 }

@@ -13,56 +13,58 @@ def index(request):
     informações['titulo_pagina'] = 'Index das Cotações'
     return render(request, 'cotacao/index.html', informações)
 
-def connfiguracao(request, id_ativo):
-
+def configuracao(request, id_ativo=1):
+    ativo = Ativo.objects.get(id=id_ativo)
     # Caso alterações tenham sido feitas
     if request.method == 'POST':
-        ativo = Ativo.objects.get(id=id_ativo)
-
         # Recupera informações do formulário
         form = FormMonitoramento(request.POST)
-        preco_venda = form.cleaned_data['preco_venda']
-        preco_compra = form.cleaned_data['preco_compra']
-        intervalo_consulta = form.cleaned_data['intervalo_consulta']
-        monitoramento = form.cleaned_data['monitoramento']
+        if form.is_valid():
+            print('é valido')
+            preco_venda = form.cleaned_data['preco_venda']
+            preco_compra = form.cleaned_data['preco_compra']
+            intervalo_consulta = form.cleaned_data['intervalo_consulta']
+            monitoramento = form.cleaned_data['monitoramento']  
 
-        # Se o ativo já estiver sendo monitorado previamente
-        if ativo.e_monitorado():
-            ativo_monitorado = AtivoMonitorado.objects.get(ativo=ativo)
+            # Se o ativo já estiver sendo monitorado previamente
+            if ativo.e_monitorado():
+                ativo_monitorado = AtivoMonitorado.objects.get(ativo=ativo) 
             
-            # Alterações nas informações do ativo monitorado
-            if monitoramento:
-                ativo_monitorado.preco_compra = preco_compra
-                ativo_monitorado.preco_venda = preco_venda
-                ativo_monitorado.intervalo_consulta = intervalo_consulta
-                ativo_monitorado.save()
+                # Alterações nas informações do ativo monitorado
+                if monitoramento:
+                    ativo_monitorado.preco_compra = preco_compra
+                    ativo_monitorado.preco_venda = preco_venda
+                    ativo_monitorado.intervalo_consulta = intervalo_consulta
+                    ativo_monitorado.save()
             
-            # Ativo deixou de ser monitorado
-            else:
-                ativo_monitorado.delete()
+                # Ativo deixou de ser monitorado
+                else:
+                    ativo_monitorado.delete()
         
-        # Ativo não está sendo monitorado
-        else:
-
-            # Salva o ativo monitorado
-            if monitoramento:
-                ativo_monitorado = AtivoMonitorado(
-                    ativo=ativo,
-                    preco_compra=preco_compra,
-                    preco_venda=preco_venda, 
-                    intervalo_consulta = intervalo_consulta
-                )
-                ativo_monitorado.save()
-            
-            # Não faz nada
+            # Ativo não está sendo monitorado
             else:
-                pass
+                # Salva o ativo monitorado
+                if monitoramento:
+                    ativo_monitorado = AtivoMonitorado(
+                        ativo=ativo,
+                        preco_compra=preco_compra,
+                        preco_venda=preco_venda, 
+                        intervalo_consulta = intervalo_consulta
+                    )
+                    ativo_monitorado.save()
+                
+                # Não faz nada
+                else:
+                    pass
         
         return redirect('lista') # Retorna para a lista de ativos
     
     # Carrega a página
     else:
-        return HttpResponse("Página de connfigurações")
+        informacoes = dict()
+        informacoes['titulo_pagina'] = 'config'
+        informacoes['form'] = FormMonitoramento()
+        return render(request, 'cotacao/configuracao.html', informacoes)
 
 def armazena_dados_csv(request):
     # Utilizada previamente para inserir ativos e empresas no banco de dados

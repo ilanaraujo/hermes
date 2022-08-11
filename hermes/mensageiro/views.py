@@ -11,10 +11,12 @@ def configuracao(request):
     return HttpResponse('Configuração do email')
 
 def teste_envio(request):
+
+    aux_var = 23
     send_mail(
         subject='Teste',
-        message='Queria decorar o Lorem Ipsum',
-        from_email=settings.EMAIL_HOST_USER,
+        message=f'Queria decorar o Lorem Ipsum.\nLorem Ipsum {aux_var}',
+        from_email="Hermes B3 Django",
         recipient_list=['ilanrochaaraujo@gmail.com'],
         fail_silently=False,
     )
