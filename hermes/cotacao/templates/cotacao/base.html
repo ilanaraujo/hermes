@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{titulo_pagina}}</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="alinha-centro">
+            <img src="{% static 'img/hermes-logo.png' %}">
+        </div>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

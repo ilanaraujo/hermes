@@ -1,6 +1,3 @@
-from http.client import PRECONDITION_FAILED
-from re import M
-from statistics import mode
 from django.db import models
 
 class Empresa(models.Model):
@@ -19,7 +16,12 @@ class Ativo(models.Model):
 
     def __str__(self):
         return self.codigo
+    
+    # Diz se o ativo já está sendo monitorado
+    def e_monitorado(self):
+        return AtivoMonitorado.objects.filter(ativo=self).exists()
 
+# Ativos que estão sendo monitorados
 class AtivoMonitorado(models.Model):
     id = models.IntegerField(primary_key=True)
     ativo = models.ForeignKey(Ativo, on_delete=models.CASCADE)
