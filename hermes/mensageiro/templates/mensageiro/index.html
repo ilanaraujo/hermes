@@ -1,0 +1,12 @@
+{% extends 'mensageiro/base.html' %}
+
+{% block body %}
+<h1>Página do Mensageiro</h1>
+<br>
+<a href="{% url 'lista_usuarios' %}">Lista de usuários cadastrados</a><br>
+<a href="{% url 'cadastro' %}">Cadastrar novo usuário</a><br>
+<br>
+<a href="/">Página de Cotação</a>
+
+
+{% endblock %}

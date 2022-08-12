@@ -1,0 +1,24 @@
+{% extends 'cotacao/base.html' %}
+
+{% block body %}
+{% if ativos %}
+<table align="center">
+    <tr>
+        <th>Ativo</th>
+        <th>Valor de Compra</th>
+        <th>Valor de Venda</th>
+        <th>Intervalo de consulta</th>
+    </tr>
+    {% for ativo in ativos %}
+    <tr>
+        <td>{{ativo}}</td>
+        <td>{{ativo.preco_compra}}</td>
+        <td>{{ativo.preco_venda}}</td>
+        <td>{{ativo.intervalo_consulta}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h3>Nenhum ativo está sendo monitorado</h3>
+{% endif %}
+{% endblock %}  

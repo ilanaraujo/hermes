@@ -1,3 +1,4 @@
+from os import stat
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import redirect
@@ -9,11 +10,10 @@ import urllib, json
 from .forms import FormMonitoramento
 
 def index(request):
-    informações = dict()
-    informações['titulo_pagina'] = 'Index das Cotações'
+    informações = { 'titulo_pagina' : 'Index Cotacão'}
     return render(request, 'cotacao/index.html', informações)
 
-def configuracao(request, id_ativo=1):
+def configuracao(request, id_ativo):
     ativo = Ativo.objects.get(id=id_ativo)
     # Caso alterações tenham sido feitas
     if request.method == 'POST':
@@ -64,6 +64,7 @@ def configuracao(request, id_ativo=1):
         informacoes = dict()
         informacoes['titulo_pagina'] = 'config'
         informacoes['form'] = FormMonitoramento()
+        informacoes['ativo'] = Ativo.objects.get(id=id_ativo)
         return render(request, 'cotacao/configuracao.html', informacoes)
 
 def armazena_dados_csv(request):
@@ -95,30 +96,52 @@ def armazena_dados_csv(request):
 # Lista de todos os ativos
 def lista(request):
     ativos = Ativo.objects.all()
-    lista_ativos_empresas = list()
+    status_ativos = list()
+    status_ativos.append(False)
     for ativo in ativos:
-        empresa_correspondente = ativo.empresa
-        lista_ativos_empresas.append([ativo, empresa_correspondente])
-
+        status_ativos.append(ativo.e_monitorado())
+    print(status_ativos)
     informacoes = {
-        'ativos' : ativos
+        'ativos' : ativos,
+        'ativo_e_monitorado' : status_ativos,
+        'titulo_pagina' : "Ativos"
     }
     return render(request, 'cotacao/lista.html', informacoes)
 
 def lista_monitorados(request):
     ativos_monitorados = AtivoMonitorado.objects.all()
-    return HttpResponse('Lista de ativos monitorados')
+    informacoes = { 'ativos' : ativos_monitorados}
+    informacoes['titulo_pagina'] = 'Ativos Monitorados'
 
-# Obtém a cotação atual de um ativo
-def obter_cotacao(request, id_ativo):
+    for i in ativos_monitorados:
+        print(i.ativo)
+    return render(request, 'cotacao/lista_monitorados.html', informacoes)
+
+# Obtem a cotação atual de um ativo
+def consulta(request, id_ativo):
     ativo = Ativo.objects.get(id=id_ativo)
+
+    # Busca na API
     url = f'https://www.okanebox.com.br/api/acoes/ultima/{ativo}/' # API
     r = urllib.request.urlopen(url)
     dados = json.loads(r.read())
-    informacoes = dict(dados)
+    informacoes = dict(dados) # Dicionário com informações obtidas na API
     informacoes['ativo'] = ativo
+    informacoes['titulo_pagina'] = 'Cotação do Ativo'
     data = date.today()
     preco = float(informacoes['PREULT'])
+
+    # Armazena a nova consulta
     nova_consulta = Consulta(ativo=ativo, preco=preco, data=data)
     nova_consulta.save()
-    return render(request, 'cotacao/obter_cotacao.html', informacoes)
+
+    # Exibe as informações da cosulta na página
+    return render(request, 'cotacao/consulta.html', informacoes)
+
+# Exibe todas as consultas realizadas
+def lista_consultas(request):
+    consultas = Consulta.objects.all()
+    informacoes = dict()
+    informacoes['consultas'] = consultas
+    informacoes['titulo_pagina'] = 'Lista de Consultas'
+    return render(request, 'cotacao/lista_consultas.html', informacoes)

@@ -12,7 +12,6 @@ class Ativo(models.Model):
     id = models.IntegerField(primary_key=True)
     codigo = models.CharField(max_length=10, unique=True)
     empresa = models.ForeignKey(Empresa, on_delete=models.CASCADE)
-    # Acrescentar método que diz o tipo de ação que o ativo é
 
     def __str__(self):
         return self.codigo
@@ -28,6 +27,9 @@ class AtivoMonitorado(models.Model):
     preco_compra = models.FloatField()
     preco_venda = models.FloatField()
     intervalo_consulta = models.IntegerField()
+
+    def __str__(self):
+        return self.ativo.codigo
 
     # Salva os preços de compra e venda com apennas duas casas decimais
     def save(self, *args, **kwargs):

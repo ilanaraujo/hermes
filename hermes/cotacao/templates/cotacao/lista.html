@@ -22,11 +22,18 @@
             <tr>
                 <td>{{ ativo }}</td>
                 <td>{{ ativo.empresa }}</td>
-                <td>Não<br>Monitorado</td>
                 <td>
-                    <a class="botao" href="{% url 'obter_cotacao' ativo.id %}"><button class="cotacao">Cotação Atual</button></a>
+                    {% if ativo_e_monitorado.ativo.id %}
+                    Monitorado
+                    {% else %}
+                    Não <br>Monitorado
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'obter_cotacao' ativo.id %}"><button class="cotacao">Cotação Atual</button></a>
                     <br>
-                    <a href="{% url 'obter_cotacao' ativo.id %}"><button class="config">Configurações</button></a></td>
+                    <a href="{% url 'configuracao' ativo.id %}"><button class="config">Configurações</button></a>
+                </td>
             </tr>
             {% endfor %}
         </table>

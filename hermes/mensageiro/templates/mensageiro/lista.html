@@ -1,0 +1,36 @@
+{% extends 'mensageiro/base.html' %}
+
+{% block body %}
+{% if usuarios %}
+<table align="center">
+    <tr>
+        <th>Nome</th>
+        <th>e-mail</th>
+        <th>Recebe emails</th>
+        <th>Opções</th>
+    </tr>
+    {% for usuario in usuarios %}
+    <tr>
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.email}}</td>
+        <td>
+            {% if usuario.status %}
+            Sim
+            {% else %}
+            Não
+            {% endif %}
+        </td>
+        <td>
+            <a href="{% url 'altera_status' usuario.id %}"><button class="config">Alterar Status</button></a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<h3>Sem usuários cadastrados</h3>
+{% endif %}
+<br><br>
+<a href="{% url 'cadastro' %}">Cadastrar novo usuário</a>
+
+
+{% endblock %}
