@@ -3,6 +3,8 @@ Sistema que auxilia investidores da Bolsa de Valores.
 
 O nome "Hermes" foi escolhido pelo ato de Hermes ser o deus grego do comércio e mensageiro dos deuses. Como o sistema é voltado para a bolsa de valores e envia informações, recebeu esse nome.
 
+Sistema desenvolvido em um ambiente WSL, utilizando a distro ubuntu 20.04
+
 # Instruções
 Seguem as instruções para a utilização do sistema
 ## E-mail
