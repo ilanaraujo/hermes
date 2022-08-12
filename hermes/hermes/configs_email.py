@@ -19,7 +19,8 @@ def envia_email_compra(ativo_monitorado, valor_ativo):
     assunto = "Compra de ativo"
     lista_emails = list()
     for usuario in Usuario.objects.all():
-        lista_emails.append(usuario.email)
+        if usuario.status:
+            lista_emails.append(usuario.email)
     tupla_dados = tuple(assunto, mensagem, 'Sistema Hermes', lista_emails)
     send_mass_mail(tupla_dados)
 

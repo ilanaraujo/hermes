@@ -15,20 +15,12 @@
             <tr>
                 <th>Código do ativo</th>
                 <th>Empresa</th>
-                <th>Status</th>
                 <th>Opções</th>
             </tr>
             {% for ativo in ativos %}
             <tr>
                 <td>{{ ativo }}</td>
                 <td>{{ ativo.empresa }}</td>
-                <td>
-                    {% if ativo_e_monitorado.ativo.id %}
-                    Monitorado
-                    {% else %}
-                    Não <br>Monitorado
-                    {% endif %}
-                </td>
                 <td>
                     <a href="{% url 'obter_cotacao' ativo.id %}"><button class="cotacao">Cotação Atual</button></a>
                     <br>
